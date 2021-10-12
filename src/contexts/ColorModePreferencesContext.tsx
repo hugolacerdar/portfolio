@@ -8,6 +8,7 @@ interface ColorModePreferenceProviderProps {
 interface ColorModePreferencesReturn {
   primary: string;
   secondary: string;
+  highlight: string;
 }
 
 const ColorModePreferencesContext = createContext(
@@ -19,9 +20,12 @@ export function ColorModePreferencesProvider({
 }: ColorModePreferenceProviderProps) {
   const primary = useColorModeValue("gray.600", "gray.400");
   const secondary = useColorModeValue("gray.700", "gray.300");
+  const highlight = useColorModeValue("gray.400", "gray.50");
 
   return (
-    <ColorModePreferencesContext.Provider value={{ primary, secondary }}>
+    <ColorModePreferencesContext.Provider
+      value={{ primary, secondary, highlight }}
+    >
       {children}
     </ColorModePreferencesContext.Provider>
   );
