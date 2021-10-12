@@ -1,5 +1,4 @@
 import { Grid } from "@chakra-ui/react";
-import Bio from "./Main/Bio";
 import Name from "./Main";
 
 export default function Presentation() {

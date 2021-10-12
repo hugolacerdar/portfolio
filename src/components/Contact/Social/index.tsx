@@ -1,6 +1,5 @@
 import { HStack, Link, Icon, Text, Flex } from "@chakra-ui/react";
 import { ImGithub, ImLinkedin2, ImTwitter } from "react-icons/im";
-import { useState } from "react";
 import { useColorModePreferences } from "../../../contexts/ColorModePreferencesContext";
 
 export default function Social() {

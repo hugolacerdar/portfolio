@@ -1,5 +1,4 @@
 import React from "react";
-import { useColorMode } from "@chakra-ui/react";
 import Header from "./components/Header";
 import Presentation from "./components/Presentation";
 import Projects from "./components/Projects";
