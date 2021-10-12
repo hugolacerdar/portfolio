@@ -21,6 +21,10 @@ const theme = extendTheme({
       "900": "#1B1A18",
     },
   },
+  fonts: {
+    heading: "Bebas Neue",
+    body: "Roboto",
+  },
 });
 
 export default theme;
