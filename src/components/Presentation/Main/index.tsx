@@ -1,15 +1,10 @@
-import {
-  Heading,
-  Text,
-  Grid,
-  GridItem,
-  useColorModeValue,
-} from "@chakra-ui/react";
+import { Heading, Text, Grid, GridItem } from "@chakra-ui/react";
+import { useColorModePreferences } from "../../../contexts/ColorModePreferencesContext";
 import Bio from "./Bio";
 
 export default function Name() {
-  const headingColor = useColorModeValue("gray.600", "gray.400");
-  const headingHoverColor = useColorModeValue("gray.400", "gray.50");
+  const { primary, highlight } = useColorModePreferences();
+
   const fullstack = "FULL STACK".split("");
   const web = "web".split("");
   const developer = "DEVELOPER".split("");
@@ -25,23 +20,19 @@ export default function Name() {
       ]}
     >
       <Heading
-        color={headingColor}
+        color={primary}
         fontFamily="Bebas Neue"
         fontSize={headingSizes}
         gridArea="fullstack"
       >
         {fullstack.map((part) => (
-          <Text
-            as="span"
-            _hover={{ color: headingHoverColor }}
-            transition="color 0.5s"
-          >
+          <Text as="span" _hover={{ color: highlight }} transition="color 0.5s">
             {part}
           </Text>
         ))}
       </Heading>
       <Heading
-        color={headingColor}
+        color={primary}
         fontFamily="Bebas Neue"
         fontSize={headingSizes}
         gridArea="web"
@@ -49,27 +40,19 @@ export default function Name() {
       >
         &nbsp;
         {web.map((part) => (
-          <Text
-            as="span"
-            _hover={{ color: headingHoverColor }}
-            transition="color 0.5s"
-          >
+          <Text as="span" _hover={{ color: highlight }} transition="color 0.5s">
             {part}
           </Text>
         ))}
       </Heading>
       <Heading
-        color={headingColor}
+        color={primary}
         fontFamily="Bebas Neue"
         fontSize={headingSizes}
         gridArea="developer"
       >
         {developer.map((part) => (
-          <Text
-            as="span"
-            _hover={{ color: headingHoverColor }}
-            transition="color 0.5s"
-          >
+          <Text as="span" _hover={{ color: highlight }} transition="color 0.5s">
             {part}
           </Text>
         ))}

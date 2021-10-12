@@ -4,13 +4,18 @@ import { useColorModePreferences } from "../../../contexts/ColorModePreferencesC
 
 export default function ColorModeSwitch() {
   const { toggleColorMode } = useColorMode();
-  const { primary } = useColorModePreferences();
+  const { primary, highlight } = useColorModePreferences();
   const icon = useColorModeValue(ImBrightnessContrast, ImSun);
 
   return (
     <>
       <Text onClick={toggleColorMode} cursor="pointer" fontSize="1.5rem">
-        <Icon as={icon} color={primary} />
+        <Icon
+          as={icon}
+          color={primary}
+          transition="color 1s"
+          _hover={{ color: highlight }}
+        />
       </Text>
     </>
   );
