@@ -19,7 +19,6 @@ export default function Project() {
 
   return (
     <Grid
-      gridTemplateColumns="1fr 1.5fr 1fr"
       gridTemplateAreas={[
         "'image' 'about' 'stack'",
         "'image' 'about' 'stack'",
